@@ -1,0 +1,51 @@
+@define-color pink #f5bde6;
+@define-color mauve  #c6a0f6;
+@define-color red  #ed8796;
+@define-color orangered #ee99a0;
+@define-color orange #f5a97f;
+@define-color yellow  #eed49f;
+@define-color green  #a6da95;
+@define-color black #393552;
+@define-color black2 #6e6a86;
+@define-color white #cad3f5;
+*::placeholder{
+	color : @black2;
+}
+#window {
+	font-family : "JetBrainsMono Nerd Font Mono";
+	font-size: 20px;
+	background: @black;
+	border-radius : 4px;
+}
+#outer-box{
+	border : solid 2px @white;
+	border-radius : inherit;
+	color: @white;
+}
+#input {
+	color: @white;
+	padding : 0.25em;
+	border : none;
+	background : inherit;
+	box-shadow : none;
+	caret-color: @white;
+}
+#input > image.left, #input > image.right {
+	color : @black2;
+}
+#inner-box {
+	padding-top : 4px;
+}
+#entry:selected {
+	placeholder : "caca";
+	box-shadow : none;
+	border: none;
+	background : linear-gradient(90deg, @pink,@mauve, @red, @orangered);
+}
+#text:selected {
+	color: @black;
+}
+#entry {
+	outline-style : none;
+	padding : 0.25em;
+}

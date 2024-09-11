@@ -1,0 +1,92 @@
+{
+	"layer": "top", // Waybar at top layer
+		"position": "top", // Waybar position (top|bottom|left|right)
+		"height": 36, // Waybar height (to be removed for auto height)
+			      // Choose the order of the modules
+		"group/spacetime" : {"modules" : ["clock"], "orientation" : "inherit", "spacing" : 2},
+		"group/cpugpu" : {"modules" : ["cpu", "memory"], "orientation" : "inherit"},
+		"group/battemp" : {
+			"modules" : 	["temperature" , "battery"],
+			"orientation" : "inherit"
+		},
+		"modules-left": ["hyprland/workspaces",  "custom/media"],
+		"modules-right": ["tray", "network","pulseaudio","disk","group/cpugpu","group/battemp" , "group/spacetime", "custom/poweroff"],
+
+		//modules configuration
+		"custom/media" : {
+		"format" : "{}",
+		"exec" : "$HOME/.config/waybar/scripts/mediaPlayerTest.sh",
+		"on-click": "playerctl play-pause" , 
+		},
+		"custom/poweroff": {
+		"format" : "",
+		"on-click": "wlogout" , 
+		},
+		"pulseaudio": {
+			"format": "{icon} {volume}% {format_source}",
+			"format-bluetooth": "{icon} {volume}%  {format_source}",
+			"format-icons": {
+				"headphones": "",
+				"handsfree": "",
+				"headset": "",
+				"default": ["", ""]
+			},
+			"format-muted": " {format_source}",
+			"format-source" : "󰍬",
+			"format-source-muted" : "󰍭",
+			"scroll-step": 1,
+			"on-click": "pavucontrol" , 
+		},
+		"network": {
+			"format" : "{essid} {icon} {bandwidthTotalOctets}",
+			"format": "{ifname}",
+			"format-wifi": "󰖩 {essid}",
+			"format-ethernet": "󰈀 {ifname}",
+			"format-disconnected": "󰖪 not connected",
+			"tooltip-format": "{bandwidthTotalOctets}",
+			"tooltip-format-disconnected": "󰖪 not connected",
+		},
+		"cpu" : {
+			"format" : " {usage}%",
+		},
+		"memory" : {
+			"format": "󰘚 {percentage}%",
+			"tooltip-format" : "{used}Gb/{total}Gb used" 
+		},
+		"battery" : {
+			"interval": 20,
+			"format" : "{icon}",
+			"format-icons" : ["","","","",""],
+			"format-charging" : "󱐋",
+			"tooltip-format" : "{capacity}%\n{time}"
+		},
+		"temperature" : {
+			"format" : "󰔏 {temperatureC}°C",
+			"format-critical" : "󰈸 {temperatureC}°C"
+		},
+		"clock": {
+			"interval": 60,
+			"tooltip": true,
+			"format": "{:%H:%M}",
+			"tooltip-format": "{:%d/%m/%Y}",
+		},
+		"disk": {
+			"format": "󰋊 {free}"
+		},
+		"hyprland/window" : {
+			"max-length" : 32 
+		},
+		"hyprland/workspaces" : {
+			"format": "{icon}{windows}",
+			"window-rewrite": {
+				"title<.*youtube.*>": " ", // Windows whose titles contain "youtube"
+				"class<firefox>": " ", // Windows whose classes are "firefox"
+				"class<firefox> title<.*github.*>": " ", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
+				"class<kitty>" : " ", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
+			},
+			"window-rewrite-default" : " "
+		}
+
+
+
+}
