@@ -1,0 +1,56 @@
+$pink :#f5bde6;
+$mauve :#c6a0f6;
+$red :#ed8796;
+$orangered :#ee99a0;
+$orange :#f5a97f;
+$yellow :#eed49f;
+$green :#a6da95;
+$blue :#91d7e3;
+$black :#393552;
+$black2 :#6e6a86;
+$white :#cad3f5;
+
+window#osd {
+  min-width : 100px;
+  background-color: $black;
+  color: $white;
+  border-radius: 4px;
+  padding: 8px 14px;
+  border: none;
+
+  #container {
+    margin: 12px;
+  }
+
+  /*image,
+  label {
+  }
+  */
+
+  progressbar:disabled,
+  image:disabled {
+    background-color: $black2;
+    opacity: 0.5;
+  }
+
+  progressbar {
+    min-width : 50px;
+    min-height: 6px;
+    border-radius: 999px;
+    background: transparent;
+    border: none;
+  }
+
+  trough {
+    min-height: inherit;
+    border-radius: inherit;
+    border: none;
+  }
+
+  progress {
+    background-color: $white;
+    min-height: inherit;
+    border-radius: inherit;
+    border: none;
+  }
+}
