@@ -2,3 +2,6 @@ stylesheet=./styles.css
 allow-images=true
 width=40%
 no-action=true
+key_down=Ctrl-j
+key_up=Ctrl-k
+key_exit=Ctrl-w, Escape
