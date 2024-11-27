@@ -1,3 +1,4 @@
 stylesheet=./styles.css
 allow-images=true
 width=40%
+no-action=true
