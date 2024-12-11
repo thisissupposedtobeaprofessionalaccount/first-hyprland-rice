@@ -84,8 +84,10 @@
 				"class<firefox>": " ", // Windows whose classes are "firefox"
 				"class<thunderbird>": " ", // Windows whose classes are "thunderbird"
 				"class<spotify>": " ", // Windows whose classes are "spotify"
+				"class<obsidian>": " ", // Windows whose classes are "obsidian"
 				"class<firefox> title<.*github.*>": " ", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
 				"class<kitty>" : " ", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
+				"class<steam>" : " ", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
 			},
 			"window-rewrite-default" : " "
 		}
