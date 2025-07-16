@@ -62,7 +62,8 @@
 		},
 		"temperature" : {
 			"format" : "󰔏 {temperatureC}°C",
-			"format-critical" : "󰈸 {temperatureC}°C"
+			"format-critical" : "󰈸 {temperatureC}°C",
+      "hwmon-path": ["/sys/devices/platform/coretemp.0/hwmon/hwmon7/temp1_input"],
 		},
 		"clock": {
 			"interval": 60,
@@ -88,6 +89,7 @@
 				"class<firefox> title<.*github.*>": " ", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
 				"class<kitty>" : " ", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
 				"class<steam>" : " ", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
+        "class<betaflight-configurator>" : " 󰾡",
 			},
 			"window-rewrite-default" : " "
 		}
