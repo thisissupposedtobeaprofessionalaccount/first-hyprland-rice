@@ -63,7 +63,7 @@
 		"temperature" : {
 			"format" : "󰔏 {temperatureC}°C",
 			"format-critical" : "󰈸 {temperatureC}°C",
-      "hwmon-path": ["/sys/devices/platform/coretemp.0/hwmon/hwmon7/temp1_input"],
+      "hwmon-path": ["/sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input"],
 		},
 		"clock": {
 			"interval": 60,
