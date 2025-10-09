@@ -90,7 +90,8 @@
 				"class<kitty>" : " ", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
 				"class<steam>" : " ", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
         "class<betaflight-configurator>" : " 󰾡",
-        "class<actual>" :" "
+        "class<actual>" :" ",
+        "class<figma-linux>" : " "
 			},
 			"window-rewrite-default" : " "
 		}
